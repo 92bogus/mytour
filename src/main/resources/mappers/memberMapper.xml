@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.co.mytour.mapper.MemberMapper">
+	<insert id="create">
+		insert into tbl_member(mno, userid, username, userpw, email, mobile, zipcode, roadAddr, detailedAddr, regdate)
+		values((select nvl(max(mno), 0) + 1 from tbl_member), 
+		#{userid}, #{username}, #{userpw}, #{email}, #{mobile}, #{zipcode}, #{roadAddr}, #{detailedAddr}, sysdate)
+	</insert>
+	
+	<select id="idCheck" resultType="Member">
+		select userid from tbl_member where userid = #{userid}
+	</select>
+	
+	<select id="emailCheck" resultType="Member">
+      select email from tbl_member where email = #{email}
+   </select>
+   
+	<update id="modify">
+		update tbl_member set userpw=#{userpw}, email=#{email}, mobile=#{mobile},
+		zipcode=#{zipcode}, roadaddr=#{roadaddr}
+		where userid=${userid}
+   	</update>
+   	
+   	<select id="read" resultType="Member">
+   		select * from tbl_member where userid=#{userid}
+   	</select>
+   	
+   	<select id="selectByIdAndPassword" resultType="Member">
+   		select * from tbl_member where userid = #{id} and userpw = #{password}
+   	</select>
+</mapper>
+

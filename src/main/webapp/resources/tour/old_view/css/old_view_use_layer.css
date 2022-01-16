@@ -1,0 +1,20 @@
+﻿/* �덉씠�댄뙘�낆갹 */
+.old-view .pop-layer {display:none; position:absolute; top:28%; left:50%; width:auto; height:auto; background-color:#fff; z-index:10;}	/* display:none; */
+.old-view .pop-layer .pop-container {padding:0 8px 8px 8px; background:#fff; border:solid 2px #1390d8;}
+
+.old-view div.head{position:relative; margin-bottom:15px;font-size:17px; }
+.old-view div.head div.h_left {position:absolute;top:0; left:0; width:10px; height:41px; background:url("/assets/images/my_admin/common/layer_hl_bg.gif") no-repeat;}
+.old-view div.head div.h_right{position:absolute;top:0; right:0; width:10px; height:41px; background:url("/assets/images/my_admin/common/layer_hr_bg.gif") no-repeat;}
+.old-view div.head div.h_center{ padding:4px 28px 0 28px; height:35px; line-height:28px; color:#fff; font-family:'NGB'; background:url("/assets/images/my_admin/common/layer_hc_bg.gif") repeat-x; }
+.old-view div.head div.h_center span {position:absolute; top:8px; left:15px; width:6px; height:20px; display:inline-block; background:url("/assets/images/my_admin/common/layer_h_bg.gif") no-repeat;}
+
+.old-view a.cbtn {position:absolute; top:12px; right:5%; display:inline-block; width:20px; height:18px; background:url("/assets/images/my_admin/common/layer_btn_close.gif") no-repeat; text-indent:-1000em;}
+
+.old-view p.choice { line-height:16px; margin-bottom:5px; }
+.old-view .radio {vertical-align:middle; }
+
+.old-view .option_popup { position:absolute; width:209px; padding:17px 0 0; color:#206491; border:solid 2px #1390d8; background:#f7f7f7 url('../images/common/bg_layer_over_top.gif') no-repeat 0 0;  z-index:100;}
+.old-view .option_popup .option_popup_cont { padding:0 ; background:url('../images/common/bg_layer_over_bottom.gif') repeat-y 0 100%;}
+.old-view .option_popup .option_popup_cont h2 { margin:0 0 0 20px; padding:0 0 0 6px; background:url('../images/common/blt_arrow.gif') no-repeat 0 6px; color:#666;}
+.old-view .option_popup .option_popup_cont p { float:none !important; padding:0 20px 20px 20px !important; color:#878686 !important; letter-spacing:0 !important;}
+.old-view .option_popup .layer_btn { position:absolute; top:7px; right:10px; }

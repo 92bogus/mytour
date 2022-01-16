@@ -1,0 +1,87 @@
+﻿/* Button Reset */
+.old-view .button,
+.old-view .button a,
+.old-view .button button,
+.old-view .button input { position:relative; margin:0; display:-moz-inline-stack; display:inline-block; text-decoration:none !important; border:0; font-size:12px; font-family: 'dotum', 'arial'; white-space:nowrap; overflow:visible; color:#fff; font-weight:bold; margin-right:1px; } 
+.old-view .button { height:30px; vertical-align:middle; margin-right:7px; background-position:left top; }
+.old-view .button a,
+.old-view .button button,
+.old-view .button input{ left:2px; vertical-align:top; cursor:pointer;}
+
+/* Button Size */
+.old-view .button.large { height:29px; background-position:left -30px; }
+.old-view .button.xLarge { height:35px; background-position:left -65px; }
+.old-view .button.small { height:24px; }
+
+.old-view .button a,
+.old-view .button button,
+.old-view .button input {left:28px; height:30px; padding:0 22px 0 20px; font-size:12px; line-height:33px; background-position:right top; }
+
+.old-view .button.large a,
+.old-view .button.large button,
+.old-view .button.large input { height:30px; padding:0 10px 0 8px; font-size:16px; line-height:29px; background-position:right -30px;}
+
+.old-view .button.xLarge a,
+.old-view .button.xLarge button,
+.old-view .button.xLarge input { height:35px; padding:0 10px 0 8px; font-size:20px; line-height:35px; background-position:right -65px;}
+
+.old-view .button.small a,
+.old-view .button.small button,
+.old-view .button.small input { height:24px; padding:0 8px 0 7px; font-size:11px; line-height:27px; font-weight:normal; }
+
+.old-view .button.small2 a,
+.old-view .button.small2 button,
+.old-view .button.small2 input {left:18px; height:27px; padding:0 8px 0 0px; font-size:11px; line-height:30px; font-weight:normal;}
+
+/* Button Text Color */
+.old-view .button.basic_p,
+.old-view .button.basic_p a,
+.old-view .button.basic_p button,
+.old-view .button.basic_p input { padding:0 22px 0 0px; line-height:33px; background-image:url("../../../assets/images/use/common/button_basic_p.gif"); color:#fff; }
+
+.old-view .button.paran_s,
+.old-view .button.paran_s a,
+.old-view .button.paran_s button,
+.old-view .button.paran_s input { height:28px; padding:0 26px 0 0px; line-height:28px; background-image:url("../../../assets/images/use/common/button_paran_s.gif"); color:#fff; }
+
+.old-view .button.paran,
+.old-view .button.paran a,
+.old-view .button.paran button,
+.old-view .button.paran input { padding:0 26px 0 0px; line-height:33px; background-image:url("../../../assets/images/use/common/button_paran.gif"); color:#fff; }
+
+.old-view .button.basic,
+.old-view .button.basic a,
+.old-view .button.basic button,
+.old-view .button.basic input { padding:0 22px 0 0px; line-height:33px; background-image:url("../../../assets/images/use/common/button_basic.gif"); color:#505050; }
+
+.old-view .button.blue,
+.old-view .button.blue a,
+.old-view .button.blue button,
+.old-view .button.blue input {left:2px; background-image:url("../../../assets/images/use/common/button_blue.gif"); color:#fff; }
+
+.old-view .button.gray,
+.old-view .button.gray a,
+.old-view .button.gray button,
+.old-view .button.gray input {left:2px; background-image:url("../../../assets/images/use/common/button_gray.gif"); color:#333;}
+
+.old-view .button.search_g,
+.old-view .button.search_g a,
+.old-view .button.search_g button,
+.old-view .button.search_g input {left:2px; background-image:url("../../../assets/images/use/common/button_search_gray.gif"); color:#333;}
+
+.old-view .button.search_g2,
+.old-view .button.search_g2 a,
+.old-view .button.search_g2 button,
+.old-view .button.search_g2 input { height:27px; background-image:url("../../../assets/images/use/common/button_search_gray2.gif"); color:#333; }
+
+.old-view .button.reset,
+.old-view .button.reset a,
+.old-view .button.reset button,
+.old-view .button.reset input {left:2px; background-image:url("../../../assets/images/use/common/button_reset.gif"); color:#fff;}
+
+
+/* Button Text Strong */
+.old-view .button.strong * { font-weight:bold !important;}
+
+/* input Button style*/
+.old-view input.button3 { height:24px; line-height:24px; font-size:12px; border:1px solid #cfcfcf; padding:0 7px; background:url("../../../assets/images/use/common/button_search_gray_bg.gif") repeat-x left bottom; border-radius:2px; cursor:pointer; display:inline-block; vertical-align:middle; }

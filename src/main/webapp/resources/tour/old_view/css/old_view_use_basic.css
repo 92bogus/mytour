@@ -1,0 +1,116 @@
+﻿/*
+ * default style definition
+ */
+body .old-view,
+.old-view p,
+.old-view h1,
+.old-view h2,
+.old-view h3,
+.old-view h4,
+.old-view h5,
+.old-view h6,
+.old-view menu,
+.old-view ul,
+.old-view ol,
+.old-view li,
+.old-view dl,
+.old-view dt,
+.old-view dd,
+.old-view table,
+.old-view th,
+.old-view td,
+.old-view form,
+.old-view fieldset,
+.old-view legend,
+.old-view input,
+.old-view textarea,
+.old-view button,
+.old-view select,
+.old-view hr{margin:0;padding:0;}
+body .old-view{background-color:#fff; font-size:12px; font-family: 'dotum', 'arial';}
+/* p, div, th, td, select, input {	color: #747474; } */
+.old-view a:link, a:visited {	color: #666; text-decoration: none; }
+.old-view a:active, a:hover { text-decoration: none; }
+.old-view a img, input {border:none;}
+.old-view fieldset {border:none;}
+.old-view input, textarea { border: 1px solid #b4d1d6; padding:1px; ime-mode:active;}
+.old-view input, select, textarea { font-size: 12px; color: #333; height:22px; font-family: 'dotum', 'arial';}
+.old-view select { font-size:11px; }
+.old-view legend, caption {visibility:hidden;overflow:hidden;top:0;left:0;width:0;height:0;font-size:0;line-height:0;}
+.old-view table{border-collapse:collapse;border-spacing:0; width:100%}
+.old-view em,address,i {font-style:normal;}
+.old-view ul,ol{list-style:none;}
+.old-view .hiden {position:absolute; overflow:hidden; top:-9999px; left:-9999px; width:0; height:1px; font-size:0; line-height:0; text-indent:-10000px;}
+
+.old-view table td input[type="text"]{vertical-align:middle;}
+.old-view table td input[type="checkbox"]{vertical-align:middle;}
+.old-view table td input[class="date"]{vertical-align:middle; }
+.old-view table td input[type="radio"]{vertical-align:middle; border:none;}
+.old-view table td input[class="check"]{vertical-align:middle; border:none;}
+.old-view table td select {vertical-align:middle;}
+
+.old-view .text_l {text-align:left;}
+.old-view .text_c {text-align:center;}
+.old-view .text_r {text-align:right;}
+
+.old-view .float_l{float:left;}
+.old-view /* .float_c{float:center;} */
+.old-view .float_r{float:right;}
+
+.old-view .vm{vertical-align:middle;}
+
+.old-view .clear_b{clear:both;}
+.old-view .c_red{color:red;}
+
+.old-view .av {vertical-align:middle; margin-top:5px; display:inline-block; }
+.old-view .mar_t5 { margin-top:5px; }
+.old-view .mar_t10 { margin-top:10px; }
+.old-view .mar_t20 { margin-top:20px; }
+.old-view .mar_b10 { margin-bottom:10px; }
+.old-view .mar_b20 { margin-bottom:20px; }
+.old-view .mar_b30 { margin-bottom:30px; }
+.old-view .mar_l40 { margin-left:40px; }
+
+.old-view .par_t10 { padding-top:10px; }
+
+/* 
+ * Nanum Gothic (Korean) http://www.google.com/webfonts/earlyaccess
+ */
+@font-face {
+  font-family: 'NGB';
+  font-style: normal;
+  font-weight: 700;
+  src: url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Bold.eot);
+  src: url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Bold.eot?#iefix) format('embedded-opentype'),
+       url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Bold.woff2) format('woff2'),
+       url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Bold.woff) format('woff'),
+       url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Bold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'NG';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.eot);
+  src: url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.eot?#iefix) format('embedded-opentype'),
+       url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.woff2) format('woff2'),
+       url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.woff) format('woff'),
+       url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.ttf) format('truetype');
+}
+
+/* @font-face{font-family:"NanumGothic"; src:url("../../../assets/css/font/NanumGothic.woff")}
+@font-face{font-family:"NanumGothic"; src:url("../../../assets/css/font/NanumGothic.eot")}
+@font-face{font-family:"NanumGothic_s"; src:url("../../../assets/css/font/NanumGothic_s.woff")}
+@font-face{font-family:"NanumGothic_s"; src:url("../../../assets/css/font/NanumGothic_s.eot")}
+@font-face{font-family:"NanumGothicBold"; src:url("../../../assets/css/font/NanumGothicBold.woff")}
+@font-face{font-family:"NanumGothicBold"; src:url("../../../assets/css/font/NanumGothicBold.eot")}
+ */
+ 
+ 
+ 
+ /* 20151112 IE 8 �댄븯 硫붿떆吏� �뱀젒洹쇱꽦�묒뾽 */
+.old-view .ie7 { margin:10px; overflow:hidden; width:680px; background:#f7f7f7; border:1px solid #e1e1e1; box-sizing:border-box; }
+.old-view .ie7 > .ie7_in { width:614px; margin:0 auto; padding:25px 0; }
+.old-view .ie7 > .ie7_in dl { margin-top:20px; }
+.old-view .ie7 > .ie7_in dt { margin-bottom:15px; }
+.old-view .ie7 > .ie7_in dd { padding-left:17px; margin-bottom:15px; }
+

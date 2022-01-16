@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.co.mytour.mapper.UserMapper">
+	<select id="login" resultType="Member">
+		select userid, userpw, username from tbl_member where userid = #{userid} and userpw = #{userpw}
+	</select>
+	
+	<update id="keepLogin">
+		update tbl_member set sessionKey = #{sessionId}, sessionLimit = #{next}
+		where userid = #{userid}
+	</update>
+	
+	<select id="checkUserWithSessionKey" resultType="Member">
+		select * from tbl_member where sessionKey = #{value} and sessionLimit > sysdate
+	</select>
+	
+	 <select id="findID" resultType="Member" >
+       select userid
+       from tbl_member
+       where email = #{email} and mobile=#{mobile}         
+    </select>
+    
+    <select id="findPwd" resultType="Member" >
+       select userpw
+       from tbl_member
+       where userid = #{userid} and mobile=#{mobile}         
+    </select>
+</mapper>
+
