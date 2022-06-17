@@ -3,66 +3,26 @@ package kr.co.mytour.board.vo;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
 
+@Getter
+@Setter
 public class PageMaker {
-	private int totalCount;	
-	
+	private int totalCount;
 	private int startPage;	
-	private int endPage;	
-
+	private int endPage;
 	private boolean prev;	
 	private boolean next;
-	
 	private int lastPage;
-	
 	private int displayPageNum = 10;
-	
 	private Criteria cri;
-	
-	public int getTotalCount() {
-		return totalCount;
-	}
+
 	public void setTotalCount(int totalCount) {
 		this.totalCount = totalCount;
 		calcData();
-	}
-	public int getStartPage() {
-		return startPage;
-	}
-	public void setStartPage(int startPage) {
-		this.startPage = startPage;
-	}
-	public int getEndPage() {
-		return endPage;
-	}
-	public void setEndPage(int endPage) {
-		this.endPage = endPage;
-	}
-	public boolean isPrev() {
-		return prev;
-	}
-	public void setPrev(boolean prev) {
-		this.prev = prev;
-	}
-	public boolean isNext() {
-		return next;
-	}
-	public void setNext(boolean next) {
-		this.next = next;
-	}
-	public int getLastPage() {
-		return lastPage;
-	}
-	public int getDisplayPageNum() {
-		return displayPageNum;
-	}
-	public Criteria getCri() {
-		return cri;
-	}
-	public void setCri(Criteria cri) {
-		this.cri = cri;
 	}
 	
 	private void calcData() {
