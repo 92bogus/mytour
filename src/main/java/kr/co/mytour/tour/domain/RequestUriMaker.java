@@ -3,13 +3,13 @@ package kr.co.mytour.tour.domain;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 
-import kr.co.mytour.tour.domain.requestParam.AreaBasedListRP;
-import kr.co.mytour.tour.domain.requestParam.DetailCommonRP;
-import kr.co.mytour.tour.domain.requestParam.DetailImageRP;
-import kr.co.mytour.tour.domain.requestParam.DetailInfoRP;
-import kr.co.mytour.tour.domain.requestParam.DetailIntroRP;
-import kr.co.mytour.tour.domain.requestParam.LocationBasedListRP;
-import kr.co.mytour.tour.domain.requestParam.SearchKeywordRP;
+import kr.co.mytour.tour.domain.request.AreaBasedListRequest;
+import kr.co.mytour.tour.domain.request.DetailCommon;
+import kr.co.mytour.tour.domain.request.DetailImage;
+import kr.co.mytour.tour.domain.request.DetailInfo;
+import kr.co.mytour.tour.domain.request.DetailIntro;
+import kr.co.mytour.tour.domain.request.LocationBasedList;
+import kr.co.mytour.tour.domain.request.SearchKeyword;
 import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
 
@@ -20,64 +20,64 @@ public class RequestUriMaker {
 	
 	private String baseUri = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/";
 	
-	public RequestUriMaker(AreaBasedListRP areaBasedListRP) {
+	public RequestUriMaker(AreaBasedListRequest areaBasedListRequest) {
 		service = "areaBasedList";
 		
-		if(areaBasedListRP.getContentTypeId().equals("15")) {
+		if(areaBasedListRequest.getContentTypeId().equals("15")) {
 			service = "searchFestival";
 		}
 		
-		if(areaBasedListRP.getContentTypeId().equals("32")) {
+		if(areaBasedListRequest.getContentTypeId().equals("32")) {
 			service = "searchStay";
 		}
 		
 		uriComponents = UriComponentsBuilder.newInstance()
-				.queryParam("ServiceKey", areaBasedListRP.getServiceKey())
-				.queryParam("numOfRows", areaBasedListRP.getNumOfRows())
-				.queryParam("MobileOS", areaBasedListRP.getMobileOS())
-				.queryParam("MobileApp", areaBasedListRP.getMobileApp())
-				.queryParam("_type", areaBasedListRP.getType())
-		
+				.queryParam("ServiceKey", areaBasedListRequest.getServiceKey())
+				.queryParam("numOfRows", areaBasedListRequest.getNumOfRows())
+				.queryParam("MobileOS", areaBasedListRequest.getMobileOS())
+				.queryParam("MobileApp", areaBasedListRequest.getMobileApp())
+				.queryParam("_type", areaBasedListRequest.get_type())
+
 				//.queryParam("areaCode", areaBasedListRP.getAreaCode())
-				.queryParam("arrange", areaBasedListRP.getArrange())
+				.queryParam("arrange", areaBasedListRequest.getArrange())
 				//.queryParam("cat1", areaBasedListRP.getCat1())
 				//.queryParam("cat2", areaBasedListRP.getCat2())
 				//.queryParam("cat3", areaBasedListRP.getCat3())
-				.queryParam("contentTypeId", areaBasedListRP.getContentTypeId())
+				.queryParam("contentTypeId", areaBasedListRequest.getContentTypeId())
 				//.queryParam("listYN", areaBasedListRP.getListYN())
 				//.queryParam("sigunguCode", areaBasedListRP.getSigunguCode())
-				.queryParam("eventStartDate", areaBasedListRP.getEventStartDate())
+				//.queryParam("eventStartDate", areaBasedListRequest.getEventStartDate())
 				//.queryParam("eventEndDate", areaBasedListRP.getEventEndDate())
 				//.queryParam("hanOk", areaBasedListRP.getHanOk())
 				//.queryParam("benikia", areaBasedListRP.getBenikia())
 				//.queryParam("goodStay", areaBasedListRP.getGoodStay())
 		
-				.queryParam("pageNo", areaBasedListRP.getPageNo()).build();
+				.queryParam("pageNo", areaBasedListRequest.getPageNo()).build();
 		
 	}
 	
-   public RequestUriMaker(LocationBasedListRP locationRP) {
+    public RequestUriMaker(LocationBasedList locationRP) {
 	  service = "locationBasedList";
 	  
 	  uriComponents = UriComponentsBuilder.newInstance()
 	        .queryParam("ServiceKey", locationRP.getServiceKey())
 	        .queryParam("MobileOS", locationRP.getMobileOS())
 	        .queryParam("MobileApp", locationRP.getMobileApp())
-	        .queryParam("_type", locationRP.getType())
+	        .queryParam("_type", locationRP.get_type())
 	        .queryParam("numOfRows", locationRP.getNumOfRows())
 	        .queryParam("mapX", locationRP.getMapX())
 	        .queryParam("mapY", locationRP.getMapY())
 	        .queryParam("radius", locationRP.getRadius()).build();
    }
 	
-	public RequestUriMaker(DetailCommonRP commonRP) {
+	public RequestUriMaker(DetailCommon commonRP) {
 		service = "detailCommon";
 		
 		uriComponents = UriComponentsBuilder.newInstance()
 				.queryParam("ServiceKey", commonRP.getServiceKey())
 				.queryParam("MobileOS", commonRP.getMobileOS())
 				.queryParam("MobileApp", commonRP.getMobileApp())
-				.queryParam("_type", commonRP.getType())
+				.queryParam("_type", commonRP.get_type())
 				
 				.queryParam("contentId", commonRP.getContentId())
 				.queryParam("contentTypeId", commonRP.getContentTypeId())
@@ -93,14 +93,14 @@ public class RequestUriMaker {
 		
 	}
 	
-	public RequestUriMaker(DetailIntroRP introRP) {
+	public RequestUriMaker(DetailIntro introRP) {
 		service = "detailIntro";
 		
 		uriComponents = UriComponentsBuilder.newInstance()
 				.queryParam("ServiceKey", introRP.getServiceKey())
 				.queryParam("MobileOS", introRP.getMobileOS())
 				.queryParam("MobileApp", introRP.getMobileApp())
-				.queryParam("_type", introRP.getType())
+				.queryParam("_type", introRP.get_type())
 				
 				.queryParam("contentId", introRP.getContentId())
 				.queryParam("contentTypeId", introRP.getContentTypeId())
@@ -110,14 +110,14 @@ public class RequestUriMaker {
 		
 	}
 	
-	public RequestUriMaker(DetailInfoRP infoRP) {
+	public RequestUriMaker(DetailInfo infoRP) {
 		service = "detailInfo";
 		
 		uriComponents = UriComponentsBuilder.newInstance()
 				.queryParam("ServiceKey", infoRP.getServiceKey())
 				.queryParam("MobileOS", infoRP.getMobileOS())
 				.queryParam("MobileApp", infoRP.getMobileApp())
-				.queryParam("_type", infoRP.getType())
+				.queryParam("_type", infoRP.get_type())
 				
 				.queryParam("contentId", infoRP.getContentId())
 				.queryParam("contentTypeId", infoRP.getContentTypeId())
@@ -127,14 +127,14 @@ public class RequestUriMaker {
 		
 	}
 	
-	public RequestUriMaker(DetailImageRP imageRP) {
+	public RequestUriMaker(DetailImage imageRP) {
 		service = "detailImage";
 		
 		uriComponents = UriComponentsBuilder.newInstance()
 				.queryParam("ServiceKey", imageRP.getServiceKey())
 				.queryParam("MobileOS", imageRP.getMobileOS())
 				.queryParam("MobileApp", imageRP.getMobileApp())
-				.queryParam("_type", imageRP.getType())
+				.queryParam("_type", imageRP.get_type())
 				
 				.queryParam("contentId", imageRP.getContentId())
 				.queryParam("imageYN", imageRP.getImageYN()).build();
@@ -144,14 +144,14 @@ public class RequestUriMaker {
 		
 	}
 	
-	public RequestUriMaker(SearchKeywordRP searchKeywordRP) {
+	public RequestUriMaker(SearchKeyword searchKeyword) {
 		service = "searchKeyword";
 		
 		uriComponents = UriComponentsBuilder.newInstance()
-				.queryParam("ServiceKey", searchKeywordRP.getServiceKey())
-				.queryParam("MobileOS", searchKeywordRP.getMobileOS())
-				.queryParam("MobileApp", searchKeywordRP.getMobileApp())
-				.queryParam("_type", searchKeywordRP.getType())
+				.queryParam("ServiceKey", searchKeyword.getServiceKey())
+				.queryParam("MobileOS", searchKeyword.getMobileOS())
+				.queryParam("MobileApp", searchKeyword.getMobileApp())
+				.queryParam("_type", searchKeyword.get_type())
 				
 				//.queryParam("listYN", searchKeywordRP.getListYN())
 				//.queryParam("arrange", searchKeywordRP.getArrange())
@@ -161,9 +161,9 @@ public class RequestUriMaker {
 				//.queryParam("cat1", searchKeywordRP.getCat1())
 				//.queryParam("cat2", searchKeywordRP.getCat2())
 				//.queryParam("cat3", searchKeywordRP.getCat3())
-				.queryParam("keyword", encoding(searchKeywordRP.getKeyword()))
+				.queryParam("keyword", encoding(searchKeyword.getKeyword()))
 				
-				.queryParam("pageNo", searchKeywordRP.getPageNo()).build();
+				.queryParam("pageNo", searchKeyword.getPageNo()).build();
 		
 	}
 	
@@ -177,11 +177,6 @@ public class RequestUriMaker {
 		} catch(UnsupportedEncodingException e) {
 			return "";
 		}
-	}
-	
-	@Override
-	public String toString() {
-		return baseUri + service + uriComponents.toUriString();
 	}
 	
 }

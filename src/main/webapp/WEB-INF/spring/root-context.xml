@@ -30,15 +30,13 @@
 			<value>aws#sino</value>
 		</property>
 	</bean>
-	
-	<!-- mybatis의 SqlSessionFactory 인터페이스의 구현체인 SqlSessionFactoryBean(mybatis-spring) 설정 -->
+
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
     	<property name="dataSource" ref="dataSource" />
     	<property name="configLocation" value="classpath:/mybatis-config.xml" />
     	<property name="mapperLocations" value="classpath:mappers/**/*Mapper.xml" />
     </bean>
-    
-    <!-- mybatis의 SqlSession 인터페이스의 구현체인 SqlSessionTemplate(mybatis-spring) 설정 -->
+
     <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate" destroy-method="clearCache">
     	<constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory" />
     </bean>
@@ -56,8 +54,7 @@
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
     	<property name="dataSource" ref="dataSource"></property>
     </bean>
-    
-    <!-- @Transactional 애노테이션을 이용한 트랜잭션 관리를 가능케한다 -->
+
     <tx:annotation-driven/>
     
 </beans>

@@ -26,7 +26,7 @@
         <div class="welcome_title">
             <h3>축제 및 행사</h3>
             <div class="more">
-                <a href="/tour/areaBasedList?contentTypeId=15&eventStartDate=<fmt:formatDate value="${now}" pattern="yyyyMM" />01 " class="btn btn-default btn-sm">더보기</a>
+                <a href="/tour/areaBasedListRequest?contentTypeId=15&eventStartDate=<fmt:formatDate value="${now}" pattern="yyyyMM" />01 " class="btn btn-default btn-sm">더보기</a>
             </div>
         </div>
  
@@ -70,7 +70,7 @@
         <div class="welcome_title">
             <h3>관광</h3>
             <div class="more">
-                <a href="/tour/areaBasedList?contentTypeId=12" class="btn btn-default btn-sm">더보기</a>
+                <a href="/tour/areaBasedListRequest?contentTypeId=12" class="btn btn-default btn-sm">더보기</a>
             </div>
         </div>
  
@@ -110,7 +110,7 @@
         <div class="welcome_title">
             <h3>음식</h3>
             <div class="more">
-                <a href="/tour/areaBasedList?contentTypeId=39" class="btn btn-default btn-sm">더보기</a>
+                <a href="/tour/areaBasedListRequest?contentTypeId=39" class="btn btn-default btn-sm">더보기</a>
             </div>
         </div>
  
@@ -150,7 +150,7 @@
         <div class="welcome_title">
             <h3>문화</h3>
             <div class="more">
-                <a href="/tour/areaBasedList?contentTypeId=14" class="btn btn-default btn-sm">더보기</a>
+                <a href="/tour/areaBasedListRequest?contentTypeId=14" class="btn btn-default btn-sm">더보기</a>
             </div>
         </div>
  
@@ -190,7 +190,7 @@
         <div class="welcome_title">
             <h3>쇼핑</h3>
             <div class="more">
-                <a href="/tour/areaBasedList?contentTypeId=38" class="btn btn-default btn-sm">더보기</a>
+                <a href="/tour/areaBasedListRequest?contentTypeId=38" class="btn btn-default btn-sm">더보기</a>
             </div>
         </div>
  
@@ -230,7 +230,7 @@
         <div class="welcome_title">
             <h3>레포츠</h3>
             <div class="more">
-                <a href="/tour/areaBasedList?contentTypeId=28" class="btn btn-default btn-sm">더보기</a>
+                <a href="/tour/areaBasedListRequest?contentTypeId=28" class="btn btn-default btn-sm">더보기</a>
             </div>
         </div>
  
@@ -270,7 +270,7 @@
         <div class="welcome_title">
             <h3>숙박</h3>
             <div class="more">
-                <a href="/tour/areaBasedList?contentTypeId=32" class="btn btn-default btn-sm">더보기</a>
+                <a href="/tour/areaBasedListRequest?contentTypeId=32" class="btn btn-default btn-sm">더보기</a>
             </div>
         </div>
  

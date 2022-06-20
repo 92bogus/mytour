@@ -6,9 +6,14 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@RequiredArgsConstructor
 public class AuthInfo {
 	private String id;
 	private String username;
 	private String email;
+
+	public AuthInfo(String id, String username, String email) {
+		this.id = id;
+		this.username = username;
+		this.email = email;
+	}
 }

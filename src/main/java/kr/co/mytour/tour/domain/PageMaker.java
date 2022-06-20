@@ -3,9 +3,9 @@ package kr.co.mytour.tour.domain;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 
-import kr.co.mytour.tour.domain.requestParam.AreaBasedListRP;
-import kr.co.mytour.tour.domain.requestParam.RequestParam;
-import kr.co.mytour.tour.domain.requestParam.SearchKeywordRP;
+import kr.co.mytour.tour.domain.request.AreaBasedListRequest;
+import kr.co.mytour.tour.domain.request.RequestParam;
+import kr.co.mytour.tour.domain.request.SearchKeyword;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.web.util.UriComponentsBuilder;
@@ -45,32 +45,32 @@ public class PageMaker {
 	public String makeQuery(int pageNo) {
 		UriComponentsBuilder uriComponents = UriComponentsBuilder.newInstance();
 		
-		if(this.rp instanceof AreaBasedListRP) {
+		if(this.rp instanceof AreaBasedListRequest) {
 			//uriComponents.queryParam("areaCode", ((AreaBasedListRP) rp).getAreaCode());
 			//uriComponents.queryParam("arrange", ((AreaBasedListRP) rp).getArrange());
 			//uriComponents.queryParam("cat1", ((AreaBasedListRP) rp).getCat1());
 			//uriComponents.queryParam("cat2", ((AreaBasedListRP) rp).getCat2());
 			//uriComponents.queryParam("cat3", ((AreaBasedListRP) rp).getCat3());
-			uriComponents.queryParam("contentTypeId", ((AreaBasedListRP) rp).getContentTypeId());
+			uriComponents.queryParam("contentTypeId", ((AreaBasedListRequest) rp).getContentTypeId());
 			//uriComponents.queryParam("listYN", ((AreaBasedListRP) rp).getListYN());
 			//uriComponents.queryParam("sigunguCode", ((AreaBasedListRP) rp).getSigunguCode());
-			uriComponents.queryParam("eventStartDate", ((AreaBasedListRP) rp).getEventStartDate());
+			//uriComponents.queryParam("eventStartDate", ((AreaBasedListRequest) rp).getEventStartDate());
 			//uriComponents.queryParam("eventEndDate", ((AreaBasedListRP) rp).getEventEndDate());
 			//uriComponents.queryParam("hanOk", ((AreaBasedListRP) rp).getHanOk());
 			//uriComponents.queryParam("benikia", ((AreaBasedListRP) rp).getBenikia());
 			//uriComponents.queryParam("goodStay", ((AreaBasedListRP) rp).getGoodStay());
 		}
 		
-		if(this.rp instanceof SearchKeywordRP) {
+		if(this.rp instanceof SearchKeyword) {
 			//uriComponents.queryParam("listYN", ((SearchKeywordRP) rp).getListYN());
 			//uriComponents.queryParam("arrange", ((SearchKeywordRP) rp).getArrange());
-			uriComponents.queryParam("contentTypeId", ((SearchKeywordRP) rp).getContentTypeId());
+			uriComponents.queryParam("contentTypeId", ((SearchKeyword) rp).getContentTypeId());
 			//uriComponents.queryParam("areaCode", ((SearchKeywordRP) rp).getAreaCode());
 			//uriComponents.queryParam("sigunguCode", ((SearchKeywordRP) rp).getSigunguCode());
 			//uriComponents.queryParam("cat1", ((SearchKeywordRP) rp).getCat1());
 			//uriComponents.queryParam("cat2", ((SearchKeywordRP) rp).getCat2());
 			//uriComponents.queryParam("cat3", ((SearchKeywordRP) rp).getCat3());
-			uriComponents.queryParam("keyword", ((SearchKeywordRP) rp).getKeyword());
+			uriComponents.queryParam("keyword", ((SearchKeyword) rp).getKeyword());
 		}
 		
 		uriComponents.queryParam("pageNo", pageNo);

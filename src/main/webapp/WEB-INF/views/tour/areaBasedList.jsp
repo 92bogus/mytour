@@ -15,16 +15,16 @@
 <%@ include file="../include/mainmenu.jsp" %>
 <%@ include file="../include/breadCromb.jsp" %>
 
-<c:set var="areaBasedList" value="${areaBasedListMap.response.body.items.item }" />
+<c:set var="areaBasedListRequest" value="${areaBasedListMap.response.body.items.item }" />
 
 <section class="rapid-section section_50">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
 				
-				<!-- 축제 및 행사, 숙박이 아닌 경우 -->
+				<!-- 축제 및 행사, 숙박이 아닌 경우 S-->
 				<c:if test="${contentTypeId ne '15' && contentTypeId ne '32'}">
-					<c:forEach var="areaBasedListVO" items="${areaBasedList }">                                                                                                                                             		
+					<c:forEach var="areaBasedListVO" items="${areaBasedListRequest }">
 					<div class="row bg-silver">
 					    <div class="col-md-4">
 					        <a href="detail?contentId=${areaBasedListVO.contentid}&contentTypeId=${areaBasedListVO.contenttypeid }&pageNo=${rp.pageNo}">
@@ -51,10 +51,11 @@
 					<hr>
 					</c:forEach> 
 				</c:if>
-				
-				<!-- 축제 및 행사 -->
+				<!-- 축제 및 행사, 숙박이 아닌 경우 E -->
+
+				<!-- 축제 및 행사 S -->
 				<c:if test="${contentTypeId eq '15' }">
-					<c:forEach var="searchFestivalVO" items="${areaBasedList }">                                                                                                                                             
+					<c:forEach var="searchFestivalVO" items="${areaBasedListRequest }">
 						<fmt:parseDate value="${searchFestivalVO.eventstartdate}" var="eventstartdate" pattern="yyyyMMdd"/>
 						<fmt:parseDate value="${searchFestivalVO.eventenddate}" var="eventenddate" pattern="yyyyMMdd"/>
 					
@@ -83,10 +84,11 @@
 					<hr>
 					</c:forEach>
 				</c:if>
-				
-				<!-- 숙박 -->
+				<!-- 축제 및 행사 E -->
+
+				<!-- 숙박 S -->
 				<c:if test="${contentTypeId eq '32' }">
-				<c:forEach var="searchStayVO" items="${areaBasedList }">                                                                                                                                             		
+				<c:forEach var="searchStayVO" items="${areaBasedListRequest }">
 				<div class="row bg-silver">
 				    <div class="col-md-4">
 				        <a href="detail?contentId=${searchStayVO.contentid}&contentTypeId=${searchStayVO.contenttypeid }&pageNo=${rp.pageNo}">
@@ -112,36 +114,37 @@
 				<hr>
 				</c:forEach>
 				</c:if>
-	
-    			<!-- Pagination S -->
+				<!-- 숙박 E -->
+
+				<!-- Pagination S -->
                 <div class="tour-page">
 					<nav>
 						<ul class="pagination">
-							<li class="page-item"><a class="page-link" href="areaBasedList${pageMaker.makeQuery(1) }">&laquo;</a></li>
+							<li class="page-item"><a class="page-link" href="areaBasedListRequest${pageMaker.makeQuery(1) }">&laquo;</a></li>
 						<c:if test="${pageMaker.prev }">
-							<li class="page-item"><a class="page-link"  href="areaBasedList${pageMaker.makeQuery(pageMaker.startPage - 1) }">&lt;</a></li>
+							<li class="page-item"><a class="page-link"  href="areaBasedListRequest${pageMaker.makeQuery(pageMaker.startPage - 1) }">&lt;</a></li>
 						</c:if>
 						<c:if test="${!pageMaker.prev }">
-							<li class="page-item"><a class="page-link"  href="areaBasedList${pageMaker.makeQuery(1) }">&lt;</a></li>
+							<li class="page-item"><a class="page-link"  href="areaBasedListRequest${pageMaker.makeQuery(1) }">&lt;</a></li>
 						</c:if>
 						
 						<c:forEach var="idx" begin="${pageMaker.startPage }" end="${pageMaker.endPage }">
 							<li class="page-item <c:out value="${pageMaker.rp.pageNo == idx ? 'active' :  ''}" />" >
-								<a class="page-link"  href="areaBasedList${pageMaker.makeQuery(idx) }">${idx }</a>
+								<a class="page-link"  href="areaBasedListRequest${pageMaker.makeQuery(idx) }">${idx }</a>
 							</li>
 						</c:forEach>
 						
 						<c:if test="${pageMaker.next }">
-							<li class="page-item"><a class="page-link"  href="areaBasedList${pageMaker.makeQuery(pageMaker.endPage + 1) }">&gt;</a></li>
+							<li class="page-item"><a class="page-link"  href="areaBasedListRequest${pageMaker.makeQuery(pageMaker.endPage + 1) }">&gt;</a></li>
 						</c:if>
 						<c:if test="${!pageMaker.next }">
-							<li class="page-item"><a class="page-link"  href="areaBasedList${pageMaker.makeQuery(pageMaker.lastPage) }">&gt;</a></li>
+							<li class="page-item"><a class="page-link"  href="areaBasedListRequest${pageMaker.makeQuery(pageMaker.lastPage) }">&gt;</a></li>
 						</c:if>
-							<li class="page-item"><a class="page-link"  href="areaBasedList${pageMaker.makeQuery(pageMaker.lastPage) }">&raquo;</a></li>
+							<li class="page-item"><a class="page-link"  href="areaBasedListRequest${pageMaker.makeQuery(pageMaker.lastPage) }">&raquo;</a></li>
 						</ul>
 					</nav>
 				</div>
-               <!-- Pagination E -->
+                <!-- Pagination E -->
                
             </div>
         </div>

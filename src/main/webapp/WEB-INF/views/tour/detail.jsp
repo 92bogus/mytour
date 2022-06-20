@@ -18,7 +18,7 @@
 </form>
 </c:if>
 <c:if test="${cri.service ne 'searchKeyword' }">
-<form role="form" action="areaBasedList" method="get">
+<form role="form" action="areaBasedListRequest" method="get">
 	<input type="hidden" name="contentTypeId" value="${cri.contentTypeId }" />
 	<input type="hidden" name="eventStartDate" value="${cri.eventStartDate }" />
 	<input type="hidden" name="pageNo" value="${cri.pageNo }" />
