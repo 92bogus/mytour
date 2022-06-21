@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - TourServiceImplTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>TourServiceImplTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.shinho.tour.tour.service.html">com.shinho.tour.tour.service</a> &gt; TourServiceImplTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.604s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">getAreaCodeTest()</td>
+<td class="success">0.604s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2022-06-21 16:48:49.657  INFO   --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.shinho.tour.tour.service.TourServiceImplTest], using SpringBootContextLoader
+2022-06-21 16:48:49.667  INFO   --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.shinho.tour.tour.service.TourServiceImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2022-06-21 16:48:49.668  INFO   --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.shinho.tour.tour.service.TourServiceImplTest]: TourServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2022-06-21 16:48:49.773  INFO   --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.shinho.tour.TourApplication for test class com.shinho.tour.tour.service.TourServiceImplTest
+2022-06-21 16:48:49.866  INFO   --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2022-06-21 16:48:49.878  INFO   --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@30b9eadd, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@497570fb, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@412c995d, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3249a1ce, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4dd94a58, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2f4919b0, org.springframework.test.context.event.EventPublishingTestExecutionListener@a8a8b75, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@75b21c3b, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@72be135f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@155d1021, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4bd2f0dc, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@2e647e59, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2c42b421]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.6.8)
+
+2022-06-21 16:48:50.158  INFO 16396 --- [    Test worker] c.s.t.tour.service.TourServiceImplTest   : Starting TourServiceImplTest using Java 11.0.12 on SHINHO-PIONNET with PID 16396 (started by SHINHO in C:\dev\projects\mytour)
+2022-06-21 16:48:50.159  INFO 16396 --- [    Test worker] c.s.t.tour.service.TourServiceImplTest   : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2022-06-21 16:48:51.480  INFO 16396 --- [    Test worker] c.s.t.tour.service.TourServiceImplTest   : Started TourServiceImplTest in 1.564 seconds (JVM running for 3.015)
+[API URL]: http://api.visitkorea.or.kr/openapi/service/rest/KorService/areaCode?numOfRows=10&amp;pageNo=1&amp;MobileOS=ETC&amp;MobileApp=AppTest&amp;ServiceKey=lFVLzP9ISWyS58moYZ3pl9xPRb47EmwaVkDvgLlTtXi6UhpDpVaYPFE5U9dBLVw6gyM1gCgWDtDdZr3rkGDcGw==&amp;_type=json&amp;areaCode=1
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.4</a> at 2022. 6. 21. 오후 4:48:52</p>
+</div>
+</div>
+</body>
+</html>
